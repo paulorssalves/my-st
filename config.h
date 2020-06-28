@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=17:antialias=true:autohint=true";
+static char *font = "Liberation Mono:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -94,36 +94,32 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.80;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
+"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#cc241d", // vivid red
+	"#bda479", //-> #98971a mossy brownish yellow
+	"#d79921", // mildly dessaturated orange
+	"#458588", // dark cyan
+	"#b16286", // some shade between purple and pink
+	"#689d6a", // dessaturated dark green
+	"#a89984", // dessaturated light brown
+	"#928374", // like above, but darker
+	"#fb4934", // as red as it gets
+	"#b8bb26", // greenish yellow, yellowish green
+	"#fabd2f", // vivid orange
+	"#83a598", // is this [dessaturated] teal?
+	"#d3869b", // dessaturated pink
+	"#8ec07c", // light dessaturated green
+	"#ebdbb2", // light tan
 	[255] = 0,
-
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"black",
+	"#add8e6", /* 256 -> cursor */
+	"#555555", /* 257 -> rev cursor*/
+	"#101010", /* 258 -> bg */
+	"#ebdbb2", /* 259 -> fg */
 };
 
 
